@@ -46,7 +46,7 @@ export default function Login(){
 
                 {/* Don't have an account */}
                 <div className="pt-4 text-sm text-gray-400 text-center">
-                    Don't have an account?{' '}
+                    Don&apos;t have an account?{' '}
                     <Link
                         href="/signup"
                         className="text-white underline hover:text-gray-300 font-medium"
