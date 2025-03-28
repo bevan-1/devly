@@ -21,7 +21,12 @@ export default function Login(){
 
     return(
         <>
+        {/* Header Stuff */}
         <Header/>
+        <Head>
+            <title>Devly - A Marketplace For Builders, By Builders</title>
+        </Head>
+            
         <div className="min-h-screen flex items-center justify-center bg-black text-white">
             <form className="space-y-4 w-full max-w-sm p-8 bg-gray-900 rounded shadow-lg" onSubmit={handleLogin}>
                 <h2 className="text-2xl font-bold text-center">Login</h2>

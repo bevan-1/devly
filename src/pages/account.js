@@ -9,7 +9,7 @@ export default function Account(){
     const [user, setUser] = useState(null);
     const router = useRouter();
 
-    useRouter(() =>{
+    useEffect(() =>{
         supabase.auth.getUser().then(({ data: {user } }) =>{
             if (!user) router.push('/login');
             else setUser(user);
@@ -17,6 +17,12 @@ export default function Account(){
     }, []);
 
     return(
+        <>
+        {/* Header Stuff */}
+        <Header/>
+        <Head>
+            <title>Devly - A Marketplace For Builders, By Builders</title>
+        </Head>
         <div className="min-h-screen bg-black text-white flex items-center justify-center">
             {user ? (
                 <div className="text-center">
@@ -33,6 +39,7 @@ export default function Account(){
                 <p>Loading...</p>
             )}
         </div>
+        </>
     );
 }
 //#endregion

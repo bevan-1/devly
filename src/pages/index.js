@@ -8,7 +8,12 @@ import Link from 'next/link';
 export default function Home() {
   return (
     <>
+      {/* #region Header Stuff */}
       <Header/>
+      <Head>
+        <title>Devly - A Marketplace For Builders, By Builders</title>
+      </Head>
+      {/* #endregion */}
 
       {/* Hero Section */}
       <section className="bg-black text-white py-24 px-6 text-center">

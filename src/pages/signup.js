@@ -27,7 +27,13 @@ export default function SignUp(){
             return;
         }
 
-        const { error } = await supabase.auth.signUp({ email, password });
+        const { error } = await supabase.auth.signUp({
+             email, 
+             password,
+             options: {
+                emailRedirectTo: 'https://devly.vercel.app/account'
+             } 
+            });
 
         if (error){
             setMessage(error.message);
@@ -41,7 +47,12 @@ export default function SignUp(){
 
     return(
         <>
+        {/* Header Stuff */}
         <Header/>
+        <Head>
+            <title>Devly - A Marketplace For Builders, By Builders</title>
+        </Head>
+
         <div className="min-h-screen flex items-center justify-center bg-black text-white">
             <form className="space-y-4 w-full max-w-sm p-8 bg-gray-900 rounded shadow-lg" onSubmit={handleSignUp}>
                 <h2 className="text-2xl font-bold text-center">Sign Up</h2>
