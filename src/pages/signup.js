@@ -36,7 +36,11 @@ export default function SignUp(){
             });
 
         if (error){
-            setMessage(error.message);
+            if (error.message.includes("User already registered")){
+                setMessage("❌ An account with this email already exists.")
+            } else{
+                setMessage(`❌ $error.message`);
+            }
         }else{
             setMessage('✅ Check your email your confirmation');
             setTimeout(() => router.push('/login'), 10000);
