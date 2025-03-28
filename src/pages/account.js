@@ -1,7 +1,10 @@
+//#region Imports
 import { useEffect, useState} from 'react';
 import { supabase } from '@/lib/supabase';
 import { useRouter } from 'next/router';
+//#endregion
 
+//#region Account Page
 export default function Account(){
     const [user, setUser] = useState(null);
     const router = useRouter();
@@ -32,3 +35,4 @@ export default function Account(){
         </div>
     );
 }
+//#endregion

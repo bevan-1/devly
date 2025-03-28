@@ -1,5 +1,6 @@
 // Imports
 import Header from '@/components/header';
+import Link from 'next/link';
 
 import { useState } from 'react';
 import { supabase } from '../lib/supabase';
@@ -46,10 +47,10 @@ export default function Login(){
                 {/* Don't have an account */}
                 <div className="pt-4 text-sm text-gray-400 text-center">
                     Don't have an account?{' '}
-                    <a
+                    <Link
                         href="/signup"
                         className="text-white underline hover:text-gray-300 font-medium"
-                    >Sign Up</a>
+                    >Sign Up</Link>
                 </div>
             </form>
         </div>

@@ -1,5 +1,6 @@
 //#region Imports
 import Header from "../components/header";
+import Link from 'next/link';
 //#endregion
 
 
@@ -7,7 +8,7 @@ import Header from "../components/header";
 export default function Home() {
   return (
     <>
-      <Header></Header>
+      <Header/>
 
       {/* Hero Section */}
       <section className="bg-black text-white py-24 px-6 text-center">
@@ -15,13 +16,13 @@ export default function Home() {
         <p className="text-lg text-gray-400 mb-6">
           Buy & sell code tools, templates, scripts, and services - all in one place.
         </p>
-        <a href="#tools" className="bg-white text-black px-6 py-3 text-lg font-medium rounded hover:bg-gray-200">
-          Browse Tools
-        </a>
+        <Link href="/storepage" className="bg-white text-black px-6 py-3 text-lg font-medium rounded hover:bg-gray-200">
+          Browse
+        </Link>
       </section>
 
       {/* Sample Tools Section */}
-      <section id="featured-tools" className="bg-black text-white py-20 px-6">
+      <section id="featured" className="bg-black text-white py-20 px-6">
         <div className="max-w-6xl mx-auto">
           <h3 className="text-3xl font-bold text-center mb-10">Featured Tools</h3>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
