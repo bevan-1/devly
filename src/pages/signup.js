@@ -31,7 +31,7 @@ export default function SignUp(){
              email, 
              password,
              options: {
-                emailRedirectTo: 'https://devly.vercel.app/account'
+                emailRedirectTo: `${process.env.NEXT_PUBLIC_SITE_URL}/auth/callback`
              } 
             });
 

@@ -21,7 +21,7 @@ export default function Account(){
         {/* Header Stuff */}
         <Header/>
         <Head>
-            <title>Devly - A Marketplace For Builders, By Builders</title>
+            <title>Devly - Account</title>
         </Head>
         <div className="min-h-screen bg-black text-white flex items-center justify-center">
             {user ? (
